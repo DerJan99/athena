@@ -12,6 +12,12 @@
 #### Design Resources
 - [Olympics Seite](https://olympics.com/en/olympic-games/paris-2024)
 - [Brand-Design](https://www.behance.net/gallery/90057485/Paris-2024-Olympic-Games-Brand-design?tracking_source=search_projects_recommended%7COlympic%20Games)
+- [Official Brand-Design](https://www.paris2024.org/en/design/)
+- [Offical Logo for Paris 2024](https://press.paris2024.org/folders/paris-2024-emblems-f9dc-7578a.html)
+- [Official GIF-Logo for Paris 2024](https://press.paris2024.org/themes/redcurrentsredcurrents/olympics-games/images/assets/paris2024_logo.gif)
+- [Photos for Media Paris 2024](https://press.paris2024.org/folders/)
+- [Videos for Media Paris 2024](https://press.paris2024.org/videos/)
+- [Visuals and Maps for Media Paris 2024](https://press.paris2024.org/visuals-and-maps.html)
 - [Media-Guidelines IOC](https://stillmed.olympics.com/media/Documents/Olympic-Games/Tokyo-2020/Media-Guidelines-and-Access-rules/2021-Guidelines-Editorial-Use-of-the-Olympic-Properties.pdf)
 
 ----------------------------
