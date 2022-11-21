@@ -7,7 +7,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/athena",
         "index": "apps/athena/src/index.html",
@@ -15,8 +17,14 @@
         "polyfills": "apps/athena/src/polyfills.ts",
         "tsConfig": "apps/athena/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/athena/src/favicon.ico", "apps/athena/src/assets"],
-        "styles": ["apps/athena/src/styles.scss"],
+        "assets": [
+          "apps/athena/src/favicon.ico",
+          "apps/athena/src/assets"
+        ],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/athena/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -76,12 +84,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/athena/**/*.ts", "apps/athena/**/*.html"]
+        "lintFilePatterns": [
+          "apps/athena/**/*.ts",
+          "apps/athena/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/athena"],
+      "outputs": [
+        "coverage/apps/athena"
+      ],
       "options": {
         "jestConfig": "apps/athena/jest.config.ts",
         "passWithNoTests": true
