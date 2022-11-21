@@ -4,6 +4,12 @@
     "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
-    "dbaeumer.vscode-eslint"
+    "Orta.vscode-jest",
+    "dbaeumer.vscode-eslint",
+    "Angular.ng-template",
+    "cyrilletuzi.angular-schematics",
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "WallabyJs.quokka-vscode"
   ]
 }

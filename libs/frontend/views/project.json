@@ -1,0 +1,43 @@
+{
+  "name": "frontend-views",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/views/src",
+  "prefix": "athena",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/frontend/views"],
+      "options": {
+        "project": "libs/frontend/views/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/frontend/views/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/frontend/views/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/frontend/views"],
+      "options": {
+        "jestConfig": "libs/frontend/views/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/frontend/views/**/*.ts",
+          "libs/frontend/views/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
