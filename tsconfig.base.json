@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@athena/frontend/views": ["libs/frontend/views/src/index.ts"]
+      "@athena/frontend/views": ["libs/frontend/views/src/index.ts"],
+      "@athena/shared/assets": ["libs/shared/assets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
