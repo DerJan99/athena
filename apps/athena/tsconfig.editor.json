@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["**/*.ts"],
+  "include": [
+    "**/*.ts",
+    "../../libs/frontend/views/src/lib/material.module.ts"
+  ],
   "compilerOptions": {
     "types": ["jest", "node"]
   }
