@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'athena-login',
@@ -6,7 +10,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  loginForm!: FormGroup;
+  private FormSubmitAttempt!: boolean;
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
+  loginFormControl = new FormControl('', [Validators.required]);
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      userName: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
 
-  ngOnInit(): void {}
+  isFieldInvalid(field: string) {
+    return (
+      (!this.loginForm.get(field)!.valid &&
+        this.loginForm.get(field)!.touched) ||
+      (this.loginForm.get(field)!.untouched && this.FormSubmitAttempt)
+    );
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value).then((isLoggedIn: any) => {
+        if (isLoggedIn) {
+          this.router.navigate(['/overview']);
+        }
+      });
+    }
+    this.FormSubmitAttempt = true;
+  }
 }

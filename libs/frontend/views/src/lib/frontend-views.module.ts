@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { FencingComponent } from './fencing/fencing.component';
 import { HomeComponent } from './home/home.component';
@@ -13,7 +15,7 @@ import { SwimComponent } from './swim/swim.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, RouterModule, ReactiveFormsModule],
   declarations: [
     HomeComponent,
     TopMenuComponent,

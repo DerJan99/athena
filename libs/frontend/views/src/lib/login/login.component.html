@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="signin-content">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <p>
+          Willkommen bei Athena! Dieser Login hier ist nur für Mitarbeiter des
+          IOC vorgesehen.
+        </p>
+        <mat-form-field class="full-width-input">
+          <input
+            MatInput
+            type="text"
+            placeholder="User"
+            formControlName="userName"
+            required
+          />
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            please put down your username
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input
+            MatInput
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <mat-error *ngIf="isFieldInvalid('password')">
+            password is invalid
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
