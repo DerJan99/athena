@@ -16,7 +16,22 @@
         "main": "apps/api/src/main.ts",
         "tsConfig": "apps/api/tsconfig.app.json",
         "assets": [
-          "apps/api/src/assets"
+          "apps/api/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/fonts",
+            "output": "/assets/fonts"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/icons",
+            "output": "/assets/icons"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/images",
+            "output": "assets/images"
+          }
         ]
       },
       "configurations": {
