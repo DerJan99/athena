@@ -1,31 +1,31 @@
 {
-  "name": "frontend-views",
+  "name": "frontend-services",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/frontend/views/src",
+  "sourceRoot": "libs/frontend/services/src",
   "prefix": "athena",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/frontend/views"],
+      "outputs": ["dist/libs/frontend/services"],
       "options": {
-        "project": "libs/frontend/views/ng-package.json"
+        "project": "libs/frontend/services/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/frontend/views/tsconfig.lib.prod.json"
+          "tsConfig": "libs/frontend/services/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/frontend/views/tsconfig.lib.json"
+          "tsConfig": "libs/frontend/services/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/frontend/views"],
+      "outputs": ["coverage/libs/frontend/services"],
       "options": {
-        "jestConfig": "libs/frontend/views/jest.config.ts",
+        "jestConfig": "libs/frontend/services/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -33,8 +33,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/frontend/views/**/*.ts",
-          "libs/frontend/views/**/*.html"
+          "libs/frontend/services/**/*.ts",
+          "libs/frontend/services/**/*.html"
         ]
       }
     }

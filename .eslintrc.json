@@ -6,8 +6,7 @@
     "@angular-eslint/eslint-plugin",
     "@angular-eslint/eslint-plugin-template",
     "@nrwl/eslint-plugin-nx",
-    "@typescript-eslint/eslint-plugin",
-    "@typescript-eslint/parser"
+    "@typescript-eslint/eslint-plugin"
   ],
   "overrides": [
     {
