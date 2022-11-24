@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FrontendServicesModule } from '@athena/frontend/services';
 import { FrontendViewsModule } from '@athena/frontend/views';
 import { AuthService } from 'libs/frontend/views/src/lib/login/auth.service';
 
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
     FrontendViewsModule,
     MaterialModule,
     HttpClientModule,
+    FrontendServicesModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
