@@ -1,9 +1,9 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '@athena/frontend/views';
 import { BehaviorSubject } from 'rxjs';
-
-import { User } from './user';
 
 @Injectable()
 export class AuthService {

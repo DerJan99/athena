@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { User } from '../login/user';
+import { User } from '../../user';
 
 @Component({
   selector: 'athena-user-management',

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent, LoginComponent } from '@athena/frontend/views';
-import { UserManagementComponent } from 'libs/frontend/views/src/lib/user-management/user-management.component';
+import { HomeComponent, LoginComponent, UserManagementComponent } from '@athena/frontend/views';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

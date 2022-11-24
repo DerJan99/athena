@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthService } from './auth.service';
+import { AuthService } from '../../../../services/src/lib/services/auth.service';
 
 @Component({
   selector: 'athena-login',

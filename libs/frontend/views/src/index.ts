@@ -17,3 +17,9 @@ export * from './lib/fencing/fencing.component';
 export * from './lib/medal-table/medal-table.component';
 
 export * from './lib/login/login.component';
+
+export * from './lib/user-management/user-management.component';
+
+export * from './lib/material.module';
+
+export * from './user';
