@@ -1,0 +1,43 @@
+{
+  "name": "frontend-services",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/services/src",
+  "prefix": "athena",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/frontend/services"],
+      "options": {
+        "project": "libs/frontend/services/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/frontend/services/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/frontend/services/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/frontend/services"],
+      "options": {
+        "jestConfig": "libs/frontend/services/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/frontend/services/**/*.ts",
+          "libs/frontend/services/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
