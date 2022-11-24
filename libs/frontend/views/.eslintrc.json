@@ -24,7 +24,10 @@
             "prefix": "athena",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "@nrwl/nx/enforce-module-boundaries": "off",
+        "@typescript-eslint/no-empty-function": "off"
       }
     },
     {
