@@ -1,10 +1,15 @@
 import { HttpClient } from '@angular/common/http';
+import { User } from '@athena/frontend/views';
+import { map } from 'rxjs/operators';
 
-/* eslint-disable @typescript-eslint/no-empty-function */
+import { environment } from './environment';
+
 export class UserService {
   constructor(private httpClient: HttpClient) {}
-
+  host = environment.athenaHost;
   getAllUser() {
-    this.httpClient.get('');
+    return this.httpClient
+      .get(this.host + '/user/userList')
+      .pipe(map((users) => users as User[]));
   }
 }

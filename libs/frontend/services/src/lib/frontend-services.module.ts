@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import {TestService} from "./services/test.service";
+import { NgModule } from '@angular/core';
 
 @NgModule({
   imports: [CommonModule],
-  providers: [
-    TestService
-  ],
-  exports: []
+  providers: [],
+  exports: [],
 })
 export class FrontendServicesModule {}

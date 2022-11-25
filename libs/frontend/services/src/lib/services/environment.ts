@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+
+  athenaHost: 'http://localhost:3000/',
 };
 
 /*

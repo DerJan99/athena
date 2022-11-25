@@ -27,13 +27,14 @@ export class LoginComponent implements OnInit {
 
   isFieldInvalid(field: string) {
     return (
-      (!this.loginForm.get(field)!.valid &&
-        this.loginForm.get(field)!.touched) ||
-      (this.loginForm.get(field)!.untouched && this.FormSubmitAttempt)
+      (!this.loginForm.get(field)?.valid &&
+        this.loginForm.get(field)?.touched) ||
+      (this.loginForm.get(field)?.untouched && this.FormSubmitAttempt)
     );
   }
 
   onSubmit() {
+    console.log(this.loginForm.value);
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).then((isLoggedIn: any) => {
         if (isLoggedIn) {
