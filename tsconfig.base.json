@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@athena/frontend/services": ["libs/frontend/services/src/index.ts"],
+      "@athena/frontend/utils": ["libs/frontend/utils/src/index.ts"],
       "@athena/frontend/views": ["libs/frontend/views/src/index.ts"]
     }
   },
