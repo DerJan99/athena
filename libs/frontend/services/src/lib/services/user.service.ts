@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { HttpClient } from '@angular/common/http';
 import { User } from '@athena/frontend/views';
 import { map } from 'rxjs/operators';
