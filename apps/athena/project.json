@@ -10,12 +10,31 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/athena",
+        "baseHref": "/",
         "index": "apps/athena/src/index.html",
         "main": "apps/athena/src/main.ts",
         "polyfills": "apps/athena/src/polyfills.ts",
         "tsConfig": "apps/athena/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/athena/src/favicon.ico", "apps/athena/src/assets"],
+        "assets": [
+          "apps/athena/src/favicon.ico",
+          "apps/athena/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/fonts",
+            "output": "/assets/fonts"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/icons",
+            "output": "/assets/icons"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/src/images",
+            "output": "assets/images"
+          }
+        ],
         "styles": [
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/athena/src/styles.scss"
@@ -91,5 +110,8 @@
       }
     }
   },
-  "tags": []
+  "tags": [],
+  "implicitDependencies": [
+    "shared-assets"
+  ]
 }
