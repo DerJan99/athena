@@ -5,11 +5,16 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import {FrontendServicesModule} from "@athena/frontend/services";
+import { FrontendServicesModule } from '@athena/frontend/services';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FrontendServicesModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FrontendServicesModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
