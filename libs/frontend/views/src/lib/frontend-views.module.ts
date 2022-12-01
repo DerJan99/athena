@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FrontendUtilsModule } from '@athena/frontend/utils';
 
 import { FencingComponent } from './fencing/fencing.component';
 import { HomeComponent } from './home/home.component';
@@ -16,7 +17,13 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, RouterModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    RouterModule,
+    ReactiveFormsModule,
+    FrontendUtilsModule,
+  ],
   declarations: [
     HomeComponent,
     TopMenuComponent,

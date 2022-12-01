@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@athena/frontend/utils": ["libs/frontend/utils/src/index.ts"],
-      "@athena/frontend/views": ["libs/frontend/views/src/index.ts"]
+      "@athena/frontend/views": ["libs/frontend/views/src/index.ts"],
       "@athena/shared/assets": ["libs/shared/assets/src/index.ts"],
       "@athena/shared/fonts": ["libs/shared/assets/src/fonts/"],
       "@athena/shared/icons": ["libs/shared/assets/src/icons/"],

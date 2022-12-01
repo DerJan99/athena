@@ -9,8 +9,8 @@ import { User } from '../../user';
   styleUrls: ['./user-management.component.scss'],
 })
 export class UserManagementComponent implements OnInit {
-  constructor() {}
   userData = new MatTableDataSource<User>();
+  constructor() {}
 
   ngOnInit(): void {}
 }
