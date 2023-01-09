@@ -15,5 +15,5 @@
     "jest.config.ts",
     "**/*.test.ts"
   ],
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "../services/src/lib/services/auth.service.ts"]
 }

@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -33,8 +32,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
 const modules = [
-  CommonModule,
-  MatButtonModule,
   MatButtonModule,
   MatCheckboxModule,
   MatCardModule,
@@ -68,8 +65,9 @@ const modules = [
   MatGridListModule,
   FormsModule,
 ];
+
 @NgModule({
   imports: [...modules],
   exports: [...modules],
 })
-export class FrontendUtilsModule {}
+export class MaterialModule {}
