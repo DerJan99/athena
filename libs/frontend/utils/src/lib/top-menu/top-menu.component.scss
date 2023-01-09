@@ -1,0 +1,35 @@
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .menu-bar {
+    background: #f5f5f5;
+    padding: .5rem 1rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-section {
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+    }
+
+    .button-section {
+    }
+  }
+}
+
+.vertical-divider {
+  border-left: 1px solid black;
+  height: 3rem;
+  margin: 0 .5rem;
+}
+
+.svg-attr {
+  height: 3rem;
+}

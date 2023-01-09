@@ -9,6 +9,7 @@ import { AuthService } from 'libs/frontend/services/src/lib/services/auth.servic
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FrontendUtilsModule} from "@athena/frontend/utils";
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     MaterialModule,
     HttpClientModule,
     FrontendServicesModule,
+    FrontendUtilsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
