@@ -13,7 +13,6 @@ import { MaterialModule } from './material.module';
 import { MedalTableComponent } from './medal-table/medal-table.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { SwimComponent } from './swim/swim.component';
-import { TopMenuComponent } from './top-menu/top-menu.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { UserManagementComponent } from './user-management/user-management.compo
   ],
   declarations: [
     HomeComponent,
-    TopMenuComponent,
     SprintComponent,
     SwimComponent,
     JumpRidingComponent,
@@ -38,7 +36,6 @@ import { UserManagementComponent } from './user-management/user-management.compo
   ],
   exports: [
     HomeComponent,
-    TopMenuComponent,
     SprintComponent,
     SwimComponent,
     JumpRidingComponent,

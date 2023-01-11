@@ -10,39 +10,20 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "esnext",
-    "lib": [
-      "ES2021",
-      "dom"
-    ],
+    "lib": ["ES2021", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@athena/frontend/utils": [
-        "libs/frontend/utils/src/index.ts"
-      ],
-      "@athena/frontend/views": [
-        "libs/frontend/views/src/index.ts"
-      ],
-      "@athena/shared/assets": [
-        "libs/shared/assets/src/index.ts"
-      ],
-      "@athena/shared/fonts": [
-        "libs/shared/assets/src/fonts/"
-      ],
-      "@athena/shared/icons": [
-        "libs/shared/assets/src/icons/"
-      ],
-      "@athena/shared/images": [
-        "libs/shared/assets/src/images/"
-      ],
-      "@athena/frontend/services": [
-        "libs/frontend/services/src/index.ts"
-      ]
+      "@athena/shared/data-model": ["libs/shared/data-model/src/index.ts"],
+      "@athena/frontend/services": ["libs/frontend/services/src/index.ts"],
+      "@athena/frontend/utils": ["libs/frontend/utils/src/index.ts"],
+      "@athena/frontend/views": ["libs/frontend/views/src/index.ts"],
+      "@athena/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@athena/shared/fonts": ["libs/shared/assets/src/fonts/"],
+      "@athena/shared/icons": ["libs/shared/assets/src/icons/"],
+      "@athena/shared/images": ["libs/shared/assets/src/images/"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
