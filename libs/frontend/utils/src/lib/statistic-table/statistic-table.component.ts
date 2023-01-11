@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ReplaySubject} from "rxjs";
-import {Athlete} from "@athena//shared//data-model";
+import {Athlete} from "@athena/shared/data-model";
 
 @Component({
   selector: 'athena-statistic-table',
