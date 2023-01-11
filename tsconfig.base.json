@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@athena//shared//data-model": ["libs/shared/data-model/src/index.ts"],
       "@athena/frontend/services": ["libs/frontend/services/src/index.ts"],
       "@athena/frontend/utils": ["libs/frontend/utils/src/index.ts"],
       "@athena/frontend/views": ["libs/frontend/views/src/index.ts"],
