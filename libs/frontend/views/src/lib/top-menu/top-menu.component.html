@@ -20,7 +20,14 @@
   <button mat-button color="primary" class="sportTypes">Weitsprung</button>
   <button mat-button color="primary" class="sportTypes">Schwimmen</button>
   <button mat-button color="primary" class="sportTypes">Springreiten</button>
-  <button mat-button color="primary" class="sportTypes">Fechten</button>
+  <button
+    mat-button
+    color="primary"
+    class="sportTypes"
+    [routerLink]="'fencing'"
+  >
+    Fechten
+  </button>
   <button mat-button color="primary" class="sportTypes">
     Medaillienspiegel
   </button>

@@ -1,0 +1,40 @@
+<table mat-table [dataSource]="fencingDataSource">
+  <ng-container matColumnDef="match">
+    <th mat-header-cell *matHeaderCellDef>Paarung</th>
+    <td mat-cell *matCellDef="let athlete">1</td>
+  </ng-container>
+  <ng-container matColumnDef="athleteName">
+    <th mat-header-cell *matHeaderCellDef>Name des Sportlers</th>
+    <td mat-cell *matCellDef="let athlete">{{ athlete.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="result">
+    <th mat-header-cell *matHeaderCellDef>Ergebnis</th>
+    <td mat-cell *matCellDef="let athlete">{{ athlete.fencingResult }}</td>
+    <!-- <td mat-cell *matCellDef="let athlete">
+      <mat-select [(value)]="selected"
+        ><mat-option
+          *ngFor="let result of fencingResultSel"
+          [value]="result.value"
+        >
+          {{ result.viewValue }}
+        </mat-option></mat-select
+      >
+    </td> -->
+  </ng-container>
+
+  <ng-container matColumnDef="notes">
+    <th mat-header-cell *matHeaderCellDef>Bemerkungen</th>
+    <td mat-cell *matCellDef="let athlete"></td>
+  </ng-container>
+  <ng-container matColumnDef="athleteManagement">
+    <th mat-header-cell *matHeaderCellDef>Verwaltung</th>
+    <td mat-cell *matCellDef="let athlete">
+      <button mat-button (click)="editAthlete(athlete)">bearbeiten</button
+      ><button mat-button>disqualifizieren</button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<button mat-button>neue Paarung eintragen</button>

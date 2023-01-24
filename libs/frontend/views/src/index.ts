@@ -14,6 +14,8 @@ export * from './lib/long-jump/long-jump.component';
 
 export * from './lib/fencing/fencing.component';
 
+export * from './lib/fencing-ref/fencing-ref.component';
+
 export * from './lib/medal-table/medal-table.component';
 
 export * from './lib/login/login.component';

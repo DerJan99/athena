@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FrontendUtilsModule } from '@athena/frontend/utils';
 
+import { FencingRefComponent } from './fencing-ref/fencing-ref.component';
 import { FencingComponent } from './fencing/fencing.component';
 import { HomeComponent } from './home/home.component';
 import { JumpRidingComponent } from './jump-riding/jump-riding.component';
@@ -32,6 +33,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     JumpRidingComponent,
     LongJumpComponent,
     FencingComponent,
+    FencingRefComponent,
     MedalTableComponent,
     LoginComponent,
     UserManagementComponent,
@@ -44,6 +46,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     JumpRidingComponent,
     LongJumpComponent,
     FencingComponent,
+    FencingRefComponent,
     MedalTableComponent,
     LoginComponent,
     UserManagementComponent,
