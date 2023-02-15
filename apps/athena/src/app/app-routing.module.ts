@@ -4,7 +4,11 @@ import {
   FencingComponent,
   FencingRefComponent,
   HomeComponent,
+  JumpRidingComponent,
   LoginComponent,
+  LongJumpComponent,
+  SprintComponent,
+  SwimComponent,
   UserManagementComponent,
 } from '@athena/frontend/views';
 
@@ -15,6 +19,11 @@ const routes: Routes = [
   { path: 'userManagement', component: UserManagementComponent },
   { path: 'fencing', component: FencingComponent },
   { path: 'fencing/fencing-ref', component: FencingRefComponent },
+  { path: 'sprint', component: SprintComponent },
+  { path: 'long-jump', component: LongJumpComponent },
+  { path: 'swimming', component: SwimComponent },
+  { path: 'jump-riding', component: JumpRidingComponent },
+  { path: 'fencing', component: FencingComponent },
 ];
 
 @NgModule({

@@ -34,7 +34,7 @@ export class FencingRefComponent {
     { value: 'verloren', viewValue: 'verloren' },
   ];
   fencingDataSource = FENCINGDATA;
-  editAthlete(athlete: Athlete) {
-    FENCINGDATA.find();
-  }
+  // editAthlete(athlete: Athlete) {
+  //   FENCINGDATA.find();
+  // }
 }

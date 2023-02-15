@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FrontendServicesModule } from '@athena/frontend/services';
+import { FrontendUtilsModule } from '@athena/frontend/utils';
 import { FrontendViewsModule, MaterialModule } from '@athena/frontend/views';
 import { AuthService } from 'libs/frontend/services/src/lib/services/auth.service';
 
@@ -12,16 +13,17 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
+  providers: [AuthService],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FrontendViewsModule,
     MaterialModule,
     HttpClientModule,
     FrontendServicesModule,
+    FrontendUtilsModule,
+    FrontendViewsModule,
   ],
-  providers: [AuthService],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}

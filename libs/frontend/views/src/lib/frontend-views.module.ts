@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FrontendUtilsModule } from '@athena/frontend/utils';
+import { FooterComponent, FrontendUtilsModule } from '@athena/frontend/utils';
 
+import { StatisticTableComponent } from '../../../utils/src/lib/statistic-table/statistic-table.component';
 import { FencingRefComponent } from './fencing-ref/fencing-ref.component';
 import { FencingComponent } from './fencing/fencing.component';
 import { HomeComponent } from './home/home.component';
@@ -18,38 +19,42 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
+  declarations: [
+    HomeComponent,
+    TopMenuComponent,
+    FooterComponent,
+    SprintComponent,
+    SwimComponent,
+    JumpRidingComponent,
+    LongJumpComponent,
+    FencingComponent,
+    FencingRefComponent,
+    MedalTableComponent,
+    LoginComponent,
+    UserManagementComponent,
+    StatisticTableComponent,
+  ],
+  exports: [
+    HomeComponent,
+    TopMenuComponent,
+    FooterComponent,
+    SprintComponent,
+    SwimComponent,
+    JumpRidingComponent,
+    LongJumpComponent,
+    FencingComponent,
+    FencingRefComponent,
+    MedalTableComponent,
+    LoginComponent,
+    UserManagementComponent,
+    StatisticTableComponent,
+  ],
   imports: [
     CommonModule,
     MaterialModule,
     RouterModule,
     ReactiveFormsModule,
     FrontendUtilsModule,
-  ],
-  declarations: [
-    HomeComponent,
-    TopMenuComponent,
-    SprintComponent,
-    SwimComponent,
-    JumpRidingComponent,
-    LongJumpComponent,
-    FencingComponent,
-    FencingRefComponent,
-    MedalTableComponent,
-    LoginComponent,
-    UserManagementComponent,
-  ],
-  exports: [
-    HomeComponent,
-    TopMenuComponent,
-    SprintComponent,
-    SwimComponent,
-    JumpRidingComponent,
-    LongJumpComponent,
-    FencingComponent,
-    FencingRefComponent,
-    MedalTableComponent,
-    LoginComponent,
-    UserManagementComponent,
   ],
 })
 export class FrontendViewsModule {}
