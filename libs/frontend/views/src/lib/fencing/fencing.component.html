@@ -1,1 +1,9 @@
-<div class="tornamentBracketContainer"></div>
+<ngtt-single-elimination-tree
+  [tournament]="fencingTournament"
+  [matchTemplate]="matchTemplate"
+>
+</ngtt-single-elimination-tree>
+
+<ng-template #matchTemplate let-match>
+  <athena-tt-match [match]="match"></athena-tt-match>
+</ng-template>

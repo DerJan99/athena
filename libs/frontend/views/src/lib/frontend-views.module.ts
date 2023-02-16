@@ -7,6 +7,7 @@ import { FooterComponent, FrontendUtilsModule } from '@athena/frontend/utils';
 import { StatisticTableComponent } from '../../../utils/src/lib/statistic-table/statistic-table.component';
 import { FencingRefComponent } from './fencing-ref/fencing-ref.component';
 import { FencingComponent } from './fencing/fencing.component';
+import { TtMatchComponent } from './fencing/tt-match/tt-match.component';
 import { HomeComponent } from './home/home.component';
 import { JumpRidingComponent } from './jump-riding/jump-riding.component';
 import { LoginComponent } from './login/login.component';
@@ -33,6 +34,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     LoginComponent,
     UserManagementComponent,
     StatisticTableComponent,
+    TtMatchComponent,
   ],
   exports: [
     HomeComponent,
@@ -48,6 +50,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
     LoginComponent,
     UserManagementComponent,
     StatisticTableComponent,
+    TtMatchComponent,
   ],
   imports: [
     CommonModule,
