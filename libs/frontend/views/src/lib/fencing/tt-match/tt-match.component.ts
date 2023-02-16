@@ -10,9 +10,12 @@ export class TtMatchComponent implements OnInit {
   @Input() match: any;
 
   ngOnInit() {
-    if (document.getElementById('score').innerText == '1') {
-      document.getElementById('score').style.backgroundColor =
-        'rgb(87, 198, 53);';
-    }
+    //   if (
+    //   document.getElementsByClassName('ngtt__team-score')[0].innerHTML == '1'
+    // ) {
+    //   document.getElementById('score').parentElement.className =
+    //     'greenBackground';
+    // }
+    // }
   }
 }

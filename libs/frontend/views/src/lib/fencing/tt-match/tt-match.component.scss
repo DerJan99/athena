@@ -44,3 +44,12 @@
   padding: 0 20px 0 10px;
   flex-shrink: 1;
 }
+
+.winnerBg {
+  background-color: rgb(92, 151, 2);
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  width: $ngtt-match-wrapper-width;
+  height: $ngtt-match-wrapper-height/2;
+  box-shadow: 5px 5px 5px rgb(227, 227, 227);
+}
