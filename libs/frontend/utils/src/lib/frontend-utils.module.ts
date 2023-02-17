@@ -11,8 +11,8 @@ import { StatisticTableComponent } from './statistic-table/statistic-table.compo
 import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule, MatTableModule],
-  declarations: [TopMenuComponent, FooterComponent, StatisticTableComponent],
-  exports: [TopMenuComponent, FooterComponent, StatisticTableComponent],
+  imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule, MatTableModule,],
+  declarations: [TopMenuComponent, FooterComponent, StatisticTableComponent,],
+  exports: [TopMenuComponent, FooterComponent, StatisticTableComponent,],
 })
 export class FrontendUtilsModule {}

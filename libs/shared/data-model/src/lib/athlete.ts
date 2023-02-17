@@ -10,7 +10,7 @@ export interface Athlete {
   lastName: string;
   birthday?: Date;
   bio?: string
-  stats: Stats;
+  stats?: Stats;
 }
 
 interface Stats {
@@ -21,21 +21,24 @@ interface Stats {
 }
 
 export interface Sprinter extends Athlete {
-  competitions: Competitions.Sprint;
+  competitions?: Competitions.Sprint;
 }
 
 export interface LongJumper extends Athlete {
-  competitions: Competitions.LongJump;
+  competitions?: Competitions.LongJump;
 }
 
 export interface Swimmer extends Athlete {
-  competitions: Competitions.Swimming;
+  competitions?: Competitions.Swimming;
 }
 
 export interface JumpRider extends Athlete {
-  competitions: Competitions.JumpRiding;
+  competitions?: Competitions.JumpRiding;
+  time: number;
+  penaltyPoints: number; 
+  disqualified: string;
 }
 
 export interface Fencer extends Athlete {
-  competitions: Competitions.Fencing;
+  competitions?: Competitions.Fencing;
 }
