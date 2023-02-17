@@ -13,5 +13,9 @@
     "jest.config.ts",
     "**/*.test.ts"
   ],
-  "include": ["**/*.ts", "src/lib/services/environment.ts"]
+  "include": [
+    "**/*.ts",
+    "src/lib/services/environment.ts",
+    "src/lib/services/athlete.service.ts"
+  ]
 }

@@ -1,16 +1,16 @@
 export enum Competitions {
-  "Sprint" = "SPRINT",
-  "LongJump" = "LONG_JUMP",
-  "Swimming" = "SWIMMING",
-  "JumpRiding" = "JUMP_RIDING",
-  "Fencing" = "FENCING",
+  'Sprint' = 'SPRINT',
+  'LongJump' = 'LONG_JUMP',
+  'Swimming' = 'SWIMMING',
+  'JumpRiding' = 'JUMP_RIDING',
+  'Fencing' = 'FENCING',
 }
 export interface Athlete {
   name: string;
   lastName: string;
   birthday?: Date;
-  bio?: string
-  stats: Stats;
+  bio?: string;
+  stats?: Stats;
 }
 
 interface Stats {
@@ -21,21 +21,21 @@ interface Stats {
 }
 
 export interface Sprinter extends Athlete {
-  competitions: Competitions.Sprint;
+  competitions?: Competitions.Sprint;
 }
 
 export interface LongJumper extends Athlete {
-  competitions: Competitions.LongJump;
+  competitions?: Competitions.LongJump;
 }
 
 export interface Swimmer extends Athlete {
-  competitions: Competitions.Swimming;
+  competitions?: Competitions.Swimming;
 }
 
 export interface JumpRider extends Athlete {
-  competitions: Competitions.JumpRiding;
+  competitions?: Competitions.JumpRiding;
 }
 
 export interface Fencer extends Athlete {
-  competitions: Competitions.Fencing;
+  competitions?: Competitions.Fencing;
 }

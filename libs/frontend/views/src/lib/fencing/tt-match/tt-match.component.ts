@@ -9,13 +9,5 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TtMatchComponent implements OnInit {
   @Input() match: any;
 
-  ngOnInit() {
-    //   if (
-    //   document.getElementsByClassName('ngtt__team-score')[0].innerHTML == '1'
-    // ) {
-    //   document.getElementById('score').parentElement.className =
-    //     'greenBackground';
-    // }
-    // }
-  }
+  ngOnInit() {}
 }

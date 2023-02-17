@@ -1,5 +1,13 @@
 import { User } from '@athena/frontend/views';
-import { Body, Controller, Get, HttpStatus, Param, Post, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Res,
+} from '@nestjs/common';
 
 import { AuthService } from './auth.service';
 

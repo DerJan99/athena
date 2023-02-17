@@ -16,5 +16,9 @@
     "**/*.test.ts",
     "node_modules"
   ],
-  "include": ["**/*.ts", "../services/src/lib/services/auth.service.ts"]
+  "include": [
+    "**/*.ts",
+    "../services/src/lib/services/auth.service.ts",
+    "../services/src/lib/services/athlete.service.ts"
+  ]
 }
