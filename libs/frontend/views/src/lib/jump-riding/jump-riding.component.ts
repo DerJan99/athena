@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ReplaySubject} from "rxjs";
-import {Competitions, JumpRider} from "@athena/shared/data-model";
+import { JumpRider} from "@athena/shared/data-model";
 
 @Component({
   selector: 'athena-jump-riding-table',

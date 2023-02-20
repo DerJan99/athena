@@ -26,6 +26,10 @@ export interface Sprinter extends Athlete {
 
 export interface LongJumper extends Athlete {
   competitions?: Competitions.LongJump;
+  firstrun: number;
+  secondrun: number;
+  thirdrun: number; 
+  disqualifiedruns: number;
 }
 
 export interface Swimmer extends Athlete {
