@@ -1,8 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { NgttTournament } from 'ng-tournament-tree';
-
 export class AthleteService {
-  fencingTournament: NgttTournament = {
+  fencingTournament: any = {
     rounds: [
       {
         type: 'Winnerbracket',

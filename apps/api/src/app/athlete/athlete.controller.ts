@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { Controller, Get } from '@nestjs/common';
-import { NgttTournament } from 'ng-tournament-tree';
 
 import { AthleteService } from './athlete.service';
 
-@Controller('api/athlete')
+@Controller('/athlete')
 export class AthleteController {
   constructor(private athleteService: AthleteService) {}
   @Get('/fencingTournament')
-  getFencingTournament(): NgttTournament {
+  getFencingTournament(): any {
     return this.athleteService.fencingTournament;
   }
 }
