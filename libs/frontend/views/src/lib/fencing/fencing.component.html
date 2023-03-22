@@ -7,8 +7,9 @@
   Referee View
 </button>
 <ngtt-single-elimination-tree
-  [tournament]="fencingTournament"
+  [tournament]="athleteService.fencingTournament"
   [matchTemplate]="matchTemplate"
+  *ngIf="athleteService.loaded"
 >
 </ngtt-single-elimination-tree>
 

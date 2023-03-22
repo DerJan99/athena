@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AthleteService } from 'libs/frontend/services/src/lib/services/athlete.service';
-import { NgttTournament } from 'ng-tournament-tree';
 
 @Component({
   selector: 'athena-fencing',
@@ -8,12 +7,9 @@ import { NgttTournament } from 'ng-tournament-tree';
   styleUrls: ['./fencing.component.scss'],
 })
 export class FencingComponent implements OnInit {
-  constructor(private athleteService: AthleteService) {}
+  constructor(public athleteService: AthleteService) {}
 
-  public fencingTournament: NgttTournament;
   ngOnInit(): void {
-    this.athleteService.currentFencingTournament.subscribe((fencTour) => {
-      this.fencingTournament = fencTour;
-    });
+    this.athleteService.fillFencingTournament();
   }
 }

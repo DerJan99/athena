@@ -8,6 +8,7 @@ export enum Competitions {
 export interface Athlete {
   name: string;
   lastName: string;
+  id?: number;
   birthday?: Date;
   bio?: string;
   stats?: Stats;
@@ -38,4 +39,7 @@ export interface JumpRider extends Athlete {
 
 export interface Fencer extends Athlete {
   competitions?: Competitions.Fencing;
+  match?: number;
+  round?: number;
+  score?: number;
 }

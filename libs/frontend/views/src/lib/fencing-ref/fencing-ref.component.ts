@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { Fencer } from '@athena/shared/data-model';
+import { AthleteService } from 'libs/frontend/services/src/lib/services/athlete.service';
 
 import { Athlete } from '../../athlete';
 
@@ -16,7 +19,7 @@ export const FENCINGDATA: Athlete[] = [
   templateUrl: './fencing-ref.component.html',
   styleUrls: ['./fencing-ref.component.scss'],
 })
-export class FencingRefComponent {
+export class FencingRefComponent implements OnInit {
   selected = 'noch offen';
   displayedColumns: string[] = [
     'match',
@@ -25,16 +28,26 @@ export class FencingRefComponent {
     'notes',
     'athleteManagement',
   ];
-  fencingResultSel = [
-    {
-      value: 'noch offen',
-      viewValue: 'noch offen',
-    },
-    { value: 'gewonnen', viewValue: 'gewonnen' },
-    { value: 'verloren', viewValue: 'verloren' },
-  ];
-  fencingDataSource = FENCINGDATA;
-  // editAthlete(athlete: Athlete) {
-  //   FENCINGDATA.find();
-  // }
+  fencingDataSource = new MatTableDataSource<Fencer>();
+  results = ['noch offen', 'gewonnen', 'verloren'];
+
+  constructor(private athleteService: AthleteService) {}
+
+  ngOnInit() {
+    this.athleteService.allFencer.subscribe((fencer) => {
+      this.fencingDataSource = new MatTableDataSource<Fencer>(fencer);
+    });
+  }
+
+  saveRound(fencer: Fencer, value) {
+    fencer.round = 1;
+    fencer.match = 1;
+    if (value == 'gewonnen') {
+      fencer.score = 1;
+    } else {
+      fencer.score = 0;
+    }
+
+    this.athleteService.saveNewRound(fencer).subscribe();
+  }
 }
