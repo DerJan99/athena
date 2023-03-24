@@ -13,11 +13,23 @@ export class AthleteService {
   host = environment.athenaHost;
   apiAthlete = this.host + 'api/athlete';
   allFencer = new BehaviorSubject<Fencer[]>(null);
+  viertelFinale = new BehaviorSubject<Fencer[]>(null);
+  halbFinale = new BehaviorSubject<Fencer[]>(null);
+  finale = new BehaviorSubject<Fencer[]>(null);
   loaded = false;
   public fencingTournament: NgttTournament;
   constructor(private httpClient: HttpClient) {
     this.getAllFencer().subscribe((fencer) => {
       this.allFencer.next(fencer);
+    });
+    this.getViertelFinale().subscribe((fencer) => {
+      this.viertelFinale.next(fencer);
+    });
+    this.getHalbFinale().subscribe((fencer) => {
+      this.halbFinale.next(fencer);
+    });
+    this.getFinale().subscribe((fencer) => {
+      this.finale.next(fencer);
     });
   }
 
@@ -26,7 +38,28 @@ export class AthleteService {
   }
 
   getAllFencer(): Observable<Fencer[]> {
-    return this.httpClient.get(this.apiAthlete + '/allFencer').pipe(
+    return this.httpClient.get(this.apiAthlete + '/achtelFinale').pipe(
+      map((fencer) => {
+        return fencer as Fencer[];
+      })
+    );
+  }
+  getViertelFinale(): Observable<Fencer[]> {
+    return this.httpClient.get(this.apiAthlete + '/viertelFinale').pipe(
+      map((fencer) => {
+        return fencer as Fencer[];
+      })
+    );
+  }
+  getHalbFinale(): Observable<Fencer[]> {
+    return this.httpClient.get(this.apiAthlete + '/halbFinale').pipe(
+      map((fencer) => {
+        return fencer as Fencer[];
+      })
+    );
+  }
+  getFinale(): Observable<Fencer[]> {
+    return this.httpClient.get(this.apiAthlete + '/finale').pipe(
       map((fencer) => {
         return fencer as Fencer[];
       })

@@ -31,6 +31,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { FinalTableComponent } from './final-table/final-table.component';
 
 const modules = [
   CommonModule,
@@ -70,6 +71,7 @@ const modules = [
 ];
 @NgModule({
   imports: [...modules],
-  exports: [...modules],
+  exports: [...modules, FinalTableComponent],
+  declarations: [FinalTableComponent],
 })
 export class FrontendUtilsModule {}

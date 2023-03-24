@@ -41,5 +41,5 @@ export interface Fencer extends Athlete {
   competitions?: Competitions.Fencing;
   match?: number;
   round?: number;
-  score?: number;
+  score?: string;
 }

@@ -20,8 +20,20 @@ export class AthleteController {
     return this.athleteService.fencingTournament;
   }
 
-  @Get('/allFencer')
-  getAllFencer() {
-    return this.athleteService.allFencer;
+  @Get('/achtelFinale')
+  getAchtelfinale() {
+    return this.athleteService.achtelFinale;
+  }
+  @Get('/viertelFinale')
+  getViertelfinale() {
+    return this.athleteService.viertelFinale;
+  }
+  @Get('/halbFinale')
+  getHalbfinale() {
+    return this.athleteService.halbFinale;
+  }
+  @Get('/finale')
+  getFinale() {
+    return this.athleteService.finale;
   }
 }

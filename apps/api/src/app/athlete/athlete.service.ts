@@ -138,9 +138,12 @@ export class AthleteService {
     ],
   };
 
-  allFencer: Fencer[] = FENCINGATHLETES;
+  achtelFinale: Fencer[] = FENCINGATHLETES;
+  viertelFinale: Fencer[];
+  halbFinale: Fencer[];
+  finale: Fencer[];
   calculateTournament() {
-    const fencingList = FENCINGATHLETES;
+    const fencingList = this.achtelFinale;
     for (let i = 0; i < 8; i++) {
       const activeMatch = this.fencingTournament.rounds[0].matches[i];
       let k = i;
@@ -154,10 +157,14 @@ export class AthleteService {
         name: fencingList[k].name + ' ' + fencingList[k].lastName,
         score: 0,
       };
+      this.achtelFinale[k].match = i;
+      this.achtelFinale[k].round = 0;
       activeMatch.teams[1] = {
         name: fencingList[k + 1].name + ' ' + fencingList[k + 1].lastName,
         score: 0,
       };
+      this.achtelFinale[k + 1].match = i;
+      this.achtelFinale[k + 1].round = 0;
       console.log(this.fencingTournament.rounds[0].matches[i]);
       console.log('match end');
     }
@@ -165,12 +172,19 @@ export class AthleteService {
 
   setWinner(fencer: Fencer) {
     console.log(fencer);
-    this.fencingTournament.rounds[fencer.round].matches[fencer.match].teams[0] =
-      fencer.name + '' + fencer.lastName;
+    if (fencer.match % 2 == 0) {
+      this.fencingTournament.rounds[fencer.round].matches[
+        fencer.match
+      ].teams[0] = fencer.name + '' + fencer.lastName;
+    } else {
+      this.fencingTournament.rounds[fencer.round].matches[
+        fencer.match
+      ].teams[1] = fencer.name + '' + fencer.lastName;
+    }
     return true;
   }
 
   saveAllFencer(fencer: Fencer) {
-    this.allFencer.push(fencer);
+    this.viertelFinale.push(fencer);
   }
 }
