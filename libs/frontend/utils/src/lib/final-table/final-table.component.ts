@@ -15,20 +15,20 @@ export class FinalTableComponent implements OnInit {
   @Input() data: Fencer[];
 
   dataSource = new MatTableDataSource<Fencer>();
-  selected = 'noch offen';
+  toggleGroups: { [id: string]: { value: string } } = {};
   displayedColumns: string[] = ['match', 'athleteName', 'result', 'notes'];
   results = ['noch offen', 'gewonnen', 'verloren'];
 
   constructor(private athleteService: AthleteService) {}
 
   saveRound(fencer: Fencer, value) {
-    console.log(this.athleteService.allFencer.value);
-    if (value == 'win') {
-      this.athleteService.allFencer.value
+    if (value === 'gewonnen') {
+      const partner = this.athleteService.allFencer.value
         .filter((x) => x.match === fencer.match)
-        .find((x) => x.id !== fencer.id).score = 'verloren';
+        .find((x) => x.id !== fencer.id);
+      partner.score = 'verloren';
       fencer.score = 'gewonnen';
-      document.getElementById(`${fencer.id}`);
+      this.toggleGroups[partner.id] = { value: 'verloren' };
       fencer.round = fencer.round + 1;
       if (fencer.match == 0 || fencer.match == 1) {
         fencer.match = 0;
