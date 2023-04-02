@@ -4,8 +4,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { AthleteService } from '@athena/frontend/services';
 import { Fencer } from '@athena/shared/data-model';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 @Component({
   selector: 'athena-final-table',
   templateUrl: './final-table.component.html',
