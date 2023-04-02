@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
@@ -32,9 +31,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
-import { NgTournamentTreeModule } from 'ng-tournament-tree';
-
 const modules = [
+  MatButtonModule,
   MatButtonModule,
   MatCheckboxModule,
   MatCardModule,
@@ -66,8 +64,6 @@ const modules = [
   MatStepperModule,
   MatSliderModule,
   MatGridListModule,
-  FormsModule,
-  NgTournamentTreeModule,
 ];
 
 @NgModule({

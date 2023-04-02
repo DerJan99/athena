@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FinalTableComponent } from './final-table.component';
+import {FinalTableComponent} from './final-table.component';
 
 describe('FinalTableComponent', () => {
   let component: FinalTableComponent;

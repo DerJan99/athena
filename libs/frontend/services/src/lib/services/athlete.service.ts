@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Fencer } from '@athena/shared/data-model';
@@ -18,6 +16,7 @@ export class AthleteService {
   finale = new BehaviorSubject<Fencer[]>(null);
   loaded = false;
   public fencingTournament: NgttTournament;
+
   constructor(private httpClient: HttpClient) {
     this.getAllFencer().subscribe((fencer) => {
       this.allFencer.next(fencer);
@@ -44,6 +43,7 @@ export class AthleteService {
       })
     );
   }
+
   getViertelFinale(): Observable<Fencer[]> {
     return this.httpClient.get(this.apiAthlete + '/viertelFinale').pipe(
       map((fencer) => {
@@ -51,6 +51,7 @@ export class AthleteService {
       })
     );
   }
+
   getHalbFinale(): Observable<Fencer[]> {
     return this.httpClient.get(this.apiAthlete + '/halbFinale').pipe(
       map((fencer) => {
@@ -58,6 +59,7 @@ export class AthleteService {
       })
     );
   }
+
   getFinale(): Observable<Fencer[]> {
     return this.httpClient.get(this.apiAthlete + '/finale').pipe(
       map((fencer) => {

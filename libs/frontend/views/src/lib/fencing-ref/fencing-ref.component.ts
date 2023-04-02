@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Fencer } from '@athena/shared/data-model';
-import { AthleteService } from 'libs/frontend/services/src/lib/services/athlete.service';
+import {Component, OnInit} from '@angular/core';
+import {Fencer} from '@athena/shared/data-model';
+import {AthleteService} from 'libs/frontend/services/src/lib/services/athlete.service';
 
-import { Athlete } from '../../athlete';
+import {Athlete} from '../../athlete';
 
 export const FENCINGDATA: Athlete[] = [
-  { name: 'Marc', nation: 'Polen', fencingResult: 'noch offen' },
+  {name: 'Marc', nation: 'Polen', fencingResult: 'noch offen'},
   {
     name: 'Jan',
     nation: 'von Sondern',
@@ -23,7 +23,9 @@ export class FencingRefComponent implements OnInit {
   fencingDataSource2: Fencer[];
   fencingDataSource3: Fencer[];
   fencingDataSource4: Fencer[];
-  constructor(private athleteService: AthleteService) {}
+
+  constructor(private athleteService: AthleteService) {
+  }
 
   ngOnInit() {
     this.athleteService.allFencer.subscribe((fencer) => {

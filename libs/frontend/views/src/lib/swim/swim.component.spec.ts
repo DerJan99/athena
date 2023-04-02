@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SwimComponent } from './swim.component';
+import {SwimComponent} from './swim.component';
 
 describe('SwimComponent', () => {
   let component: SwimComponent;

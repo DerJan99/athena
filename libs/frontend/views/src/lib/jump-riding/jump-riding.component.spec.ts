@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { JumpRidingComponent } from './jump-riding.component';
+import {JumpRidingComponent} from './jump-riding.component';
 
 describe('JumpRidingComponent', () => {
   let component: JumpRidingComponent;

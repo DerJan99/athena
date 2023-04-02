@@ -5,6 +5,7 @@ export enum Competitions {
   'JumpRiding' = 'JUMP_RIDING',
   'Fencing' = 'FENCING',
 }
+
 export interface Athlete {
   name: string;
   lastName: string;

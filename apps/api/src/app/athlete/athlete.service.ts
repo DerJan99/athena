@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { Fencer } from '@athena/shared/data-model';
+import {Fencer} from '@athena/shared/data-model';
 
-import { FENCINGATHLETES } from './mockAthlete.list';
+import {FENCINGATHLETES} from './mockAthlete.list';
 
 /* eslint-disable @typescript-eslint/no-empty-function */
 export class AthleteService {
@@ -12,79 +12,50 @@ export class AthleteService {
         matches: [
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
-            ],
-          },
-        ],
-      },
-      {
-        type: 'Winnerbracket',
-        matches: [
-          {
-            teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
-            ],
-          },
-          {
-            teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
-            ],
-          },
-          {
-            teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
-            ],
-          },
-          {
-            teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
         ],
@@ -94,14 +65,43 @@ export class AthleteService {
         matches: [
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
           {
             teams: [
-              { name: 'ausstehend', score: 0 },
-              { name: 'ausstehend', score: 0 },
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
+            ],
+          },
+          {
+            teams: [
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
+            ],
+          },
+          {
+            teams: [
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
+            ],
+          },
+        ],
+      },
+      {
+        type: 'Winnerbracket',
+        matches: [
+          {
+            teams: [
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
+            ],
+          },
+          {
+            teams: [
+              {name: 'ausstehend', score: 0},
+              {name: 'ausstehend', score: 0},
             ],
           },
         ],
@@ -142,6 +142,7 @@ export class AthleteService {
   viertelFinale: Fencer[];
   halbFinale: Fencer[];
   finale: Fencer[];
+
   calculateTournament() {
     const fencingList = this.achtelFinale;
     for (let i = 0; i < 8; i++) {
@@ -175,11 +176,11 @@ export class AthleteService {
     if (fencer.match % 2 == 0) {
       this.fencingTournament.rounds[fencer.round].matches[
         fencer.match
-      ].teams[0] = fencer.name + '' + fencer.lastName;
+        ].teams[0] = fencer.name + '' + fencer.lastName;
     } else {
       this.fencingTournament.rounds[fencer.round].matches[
         fencer.match
-      ].teams[1] = fencer.name + '' + fencer.lastName;
+        ].teams[1] = fencer.name + '' + fencer.lastName;
     }
     return true;
   }

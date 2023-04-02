@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TtMatchComponent } from './tt-match.component';
+import {TtMatchComponent} from './tt-match.component';
 
 describe('TtMatchComponent', () => {
   let component: TtMatchComponent;

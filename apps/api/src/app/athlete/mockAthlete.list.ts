@@ -1,4 +1,4 @@
-import { Fencer } from '@athena/shared/data-model';
+import {Fencer} from '@athena/shared/data-model';
 
 export const FENCINGATHLETES: Fencer[] = [
   {

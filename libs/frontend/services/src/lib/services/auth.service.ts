@@ -1,9 +1,9 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from '@athena/frontend/views';
-import { BehaviorSubject } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
+import {User} from '@athena/frontend/views';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable()
 export class AuthService {
@@ -22,6 +22,7 @@ export class AuthService {
       return false;
     }
   }
+
   register(user: User) {
     console.group(user);
     return this.http.post('http://localhost:3000/api/auth/register', {
