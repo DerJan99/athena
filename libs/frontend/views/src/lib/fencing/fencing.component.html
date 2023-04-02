@@ -1,1 +1,18 @@
-<div class="tornamentBracketContainer"></div>
+<button
+  mat-button
+  color="primary"
+  class="homeButton"
+  [routerLink]="'fencing-ref'"
+>
+  Referee View
+</button>
+<ngtt-single-elimination-tree
+  [tournament]="athleteService.fencingTournament"
+  [matchTemplate]="matchTemplate"
+  *ngIf="athleteService.loaded"
+>
+</ngtt-single-elimination-tree>
+
+<ng-template #matchTemplate let-match>
+  <athena-tt-match [match]="match"></athena-tt-match>
+</ng-template>

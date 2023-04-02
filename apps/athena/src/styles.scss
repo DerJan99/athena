@@ -2,6 +2,12 @@
 
 // TODO: Missing NG 15 Support
 //@import "material-theme.scss";
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '../../../libs/frontend/styles/ngtt-single-elimination-styles.scss';
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
