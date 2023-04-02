@@ -1,26 +1,26 @@
 .body-wrapper {
-    overflow: hidden;
+  overflow: hidden;
 
-    .header-with-bg {
-        padding: 2rem 1rem 1rem 1rem;
-        width: 100%;
-        height: 2rem;
-        text-align: center;
-        vertical-align: middle;
+  .header-with-bg {
+    padding: 2rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
 
-        .h1{
-            padding: 1rem;
-            color: black;
-        }
+    .h1 {
+      padding: 1rem;
+      color: black;
     }
+  }
 
-    .stats-table{
-        padding: 2rem 10rem;
+  .stats-table {
+    padding: 2rem 10rem;
 
-        .jump-riding-table {
-            border: 1px solid  rgb(152, 152, 152);
-            box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgb(170, 170, 170);
-            border-radius: 0.2rem;
-        }
+    .jump-riding-table {
+      border: 1px solid rgb(152, 152, 152);
+      box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem rgb(170, 170, 170);
+      border-radius: 0.2rem;
     }
+  }
 }

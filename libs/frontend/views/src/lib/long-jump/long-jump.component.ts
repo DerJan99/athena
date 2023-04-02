@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ReplaySubject} from "rxjs";
-import { LongJumper} from "@athena/shared/data-model";
+import {LongJumper} from "@athena/shared/data-model";
 
 @Component({
   selector: 'athena-long-jump-table',
@@ -10,16 +10,16 @@ import { LongJumper} from "@athena/shared/data-model";
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger("detailExpand", [
-      state("collapsed", style({ height: "0px", minHeight: "0" })),
-      state("expanded", style({ height: "*" })),
+      state("collapsed", style({height: "0px", minHeight: "0"})),
+      state("expanded", style({height: "*"})),
       transition("expanded <=> collapsed", animate("225ms cubic-bezier(0.4, 0.0, 0.2, 1)"))
     ])
   ],
 })
 export class LongJumpComponent {
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ["Nachname", "Vorname", "Erster Sprung", "Zweiter Sprung","Dritter Sprung", "Anzahl ungültiger Versuche"];
-  displayedColumns = ["lastName", "name", "firstrun","secondrun","thirdrun", "disqualifiedruns"];
+  columnsToDisplay = ["Nachname", "Vorname", "Erster Sprung", "Zweiter Sprung", "Dritter Sprung", "Anzahl ungültiger Versuche"];
+  displayedColumns = ["lastName", "name", "firstrun", "secondrun", "thirdrun", "disqualifiedruns"];
 
   private $dataStream = new ReplaySubject<LongJumper[]>();
 
@@ -57,10 +57,10 @@ const ELEMENT_DATA: LongJumper[] = [
     thirdrun: 750,
     disqualifiedruns: 0,
     stats: {
-        gold: 5,
-        silver: 6,
-        bronze: 7,
-        dsq: 0
+      gold: 5,
+      silver: 6,
+      bronze: 7,
+      dsq: 0
     }
   },
   {
@@ -72,10 +72,10 @@ const ELEMENT_DATA: LongJumper[] = [
     thirdrun: 0,
     disqualifiedruns: 3,
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 0,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 0,
     }
   },
   {
@@ -87,10 +87,10 @@ const ELEMENT_DATA: LongJumper[] = [
     thirdrun: 0,
     disqualifiedruns: 1,
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 12,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 12,
     }
   },
   {
@@ -102,10 +102,10 @@ const ELEMENT_DATA: LongJumper[] = [
     thirdrun: 350,
     disqualifiedruns: 0,
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 0,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 0,
     }
   },
   {
@@ -117,10 +117,10 @@ const ELEMENT_DATA: LongJumper[] = [
     thirdrun: 710,
     disqualifiedruns: 2,
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 1,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 1,
     }
   }
 ]

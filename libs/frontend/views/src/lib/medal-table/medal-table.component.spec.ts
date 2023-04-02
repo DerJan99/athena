@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MedalTableComponent } from './medal-table.component';
+import {MedalTableComponent} from './medal-table.component';
 
 describe('MedalTableComponent', () => {
   let component: MedalTableComponent;

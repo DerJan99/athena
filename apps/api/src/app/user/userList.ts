@@ -1,4 +1,4 @@
-import { User } from '@athena/frontend/views';
+import {User} from '@athena/frontend/views';
 
 export const USERLIST: User[] = [
   {

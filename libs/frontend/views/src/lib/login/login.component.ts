@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 import {AuthService} from "@athena/frontend/services";
 
@@ -12,12 +12,16 @@ import {AuthService} from "@athena/frontend/services";
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   private FormSubmitAttempt!: boolean;
+
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+  }
+
   loginFormControl = new FormControl('', [Validators.required]);
+
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       userName: ['', Validators.required],

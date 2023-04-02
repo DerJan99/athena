@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'athena-tt-match',
@@ -9,5 +9,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TtMatchComponent implements OnInit {
   @Input() match: any;
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

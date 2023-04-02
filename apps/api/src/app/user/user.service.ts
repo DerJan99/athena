@@ -1,4 +1,4 @@
-import { USERLIST } from './userList';
+import {USERLIST} from './userList';
 
 export class UserService {
   getAllUser() {

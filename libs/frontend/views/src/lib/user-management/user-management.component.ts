@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import {Component, OnInit} from '@angular/core';
+import {MatTableDataSource} from '@angular/material/table';
 
-import { User } from '../../user';
+import {User} from '../../user';
 
 @Component({
   selector: 'athena-user-management',
@@ -10,7 +10,10 @@ import { User } from '../../user';
 })
 export class UserManagementComponent implements OnInit {
   userData = new MatTableDataSource<User>();
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 }

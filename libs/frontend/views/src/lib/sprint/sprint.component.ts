@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ReplaySubject} from "rxjs";
 import {Sprinter} from "@athena/shared/data-model";
@@ -10,8 +10,8 @@ import {Sprinter} from "@athena/shared/data-model";
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger("detailExpand", [
-      state("collapsed", style({ height: "0px", minHeight: "0" })),
-      state("expanded", style({ height: "*" })),
+      state("collapsed", style({height: "0px", minHeight: "0"})),
+      state("expanded", style({height: "*"})),
       transition("expanded <=> collapsed", animate("225ms cubic-bezier(0.4, 0.0, 0.2, 1)"))
     ])
   ],
@@ -53,10 +53,10 @@ const ELEMENT_DATA: Sprinter[] = [
     time: 9,
     disqualified: "Nein",
     stats: {
-        gold: 5,
-        silver: 6,
-        bronze: 7,
-        dsq: 0
+      gold: 5,
+      silver: 6,
+      bronze: 7,
+      dsq: 0
     }
   },
   {
@@ -66,10 +66,10 @@ const ELEMENT_DATA: Sprinter[] = [
     time: 10,
     disqualified: "Nein",
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 0,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 0,
     }
   },
   {
@@ -79,10 +79,10 @@ const ELEMENT_DATA: Sprinter[] = [
     time: 7,
     disqualified: "Nein",
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 12,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 12,
     }
   },
   {
@@ -92,10 +92,10 @@ const ELEMENT_DATA: Sprinter[] = [
     time: 12,
     disqualified: "Nein",
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 0,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 0,
     }
   },
   {
@@ -105,10 +105,10 @@ const ELEMENT_DATA: Sprinter[] = [
     time: 13,
     disqualified: "Nein",
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 1,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 1,
     }
   }
 ]

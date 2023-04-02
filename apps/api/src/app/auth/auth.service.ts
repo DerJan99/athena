@@ -1,8 +1,10 @@
-import { User } from '@athena/frontend/views';
+import {User} from '@athena/frontend/views';
 
 /* eslint-disable @typescript-eslint/no-empty-function */
 export class AuthService {
-  constructor() {}
+  constructor() {
+  }
+
   register(user: User): Promise<User> {
     return;
   }

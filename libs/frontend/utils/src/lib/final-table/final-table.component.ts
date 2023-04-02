@@ -1,8 +1,8 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { Component, Input, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { AthleteService } from '@athena/frontend/services';
-import { Fencer } from '@athena/shared/data-model';
+import {Component, Input, OnInit} from '@angular/core';
+import {MatTableDataSource} from '@angular/material/table';
+import {AthleteService} from '@athena/frontend/services';
+import {Fencer} from '@athena/shared/data-model';
 
 @Component({
   selector: 'athena-final-table',
@@ -17,7 +17,8 @@ export class FinalTableComponent implements OnInit {
   displayedColumns: string[] = ['match', 'athleteName', 'result', 'notes'];
   results = ['noch offen', 'gewonnen', 'verloren'];
 
-  constructor(private athleteService: AthleteService) {}
+  constructor(private athleteService: AthleteService) {
+  }
 
   saveRound(fencer: Fencer, value) {
     if (value === 'gewonnen') {
@@ -26,7 +27,7 @@ export class FinalTableComponent implements OnInit {
         .find((x) => x.id !== fencer.id);
       partner.score = 'verloren';
       fencer.score = 'gewonnen';
-      this.toggleGroups[partner.id] = { value: 'verloren' };
+      this.toggleGroups[partner.id] = {value: 'verloren'};
       fencer.round = fencer.round + 1;
       if (fencer.match == 0 || fencer.match == 1) {
         fencer.match = 0;

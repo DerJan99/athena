@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {ReplaySubject} from "rxjs";
 import {Athlete} from "@athena/shared/data-model";
@@ -10,8 +10,8 @@ import {Athlete} from "@athena/shared/data-model";
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger("detailExpand", [
-      state("collapsed", style({ height: "0px", minHeight: "0" })),
-      state("expanded", style({ height: "*" })),
+      state("collapsed", style({height: "0px", minHeight: "0"})),
+      state("expanded", style({height: "*"})),
       transition("expanded <=> collapsed", animate("225ms cubic-bezier(0.4, 0.0, 0.2, 1)"))
     ])
   ],
@@ -49,10 +49,10 @@ const ELEMENT_DATA: Athlete[] = [
     lastName: "Hamilton",
     birthday: new Date(1985, 1, 7),
     stats: {
-        gold: 5,
-        silver: 6,
-        bronze: 7,
-        dsq: 8
+      gold: 5,
+      silver: 6,
+      bronze: 7,
+      dsq: 8
     }
   },
   {
@@ -60,10 +60,10 @@ const ELEMENT_DATA: Athlete[] = [
     lastName: "Bottas",
     birthday: new Date(1989, 8, 28),
     stats: {
-        gold: 9,
-        silver: 10,
-        bronze: 11,
-        dsq: 12,
+      gold: 9,
+      silver: 10,
+      bronze: 11,
+      dsq: 12,
     }
   }
 ]

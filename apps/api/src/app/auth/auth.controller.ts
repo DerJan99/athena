@@ -1,19 +1,12 @@
-import { User } from '@athena/frontend/views';
-import {
-  Body,
-  Controller,
-  Get,
-  HttpStatus,
-  Param,
-  Post,
-  Res,
-} from '@nestjs/common';
+import {User} from '@athena/frontend/views';
+import {Body, Controller, Get, HttpStatus, Param, Post, Res,} from '@nestjs/common';
 
-import { AuthService } from './auth.service';
+import {AuthService} from './auth.service';
 
 @Controller('api/auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+  }
 
   @Get('/login')
   login(
@@ -27,6 +20,6 @@ export class AuthController {
   async saveUser(@Res() response, @Body() user: User) {
     const newUser = await this.authService.register(user);
     console.log('User saved');
-    return response.status(HttpStatus.CREATED).json({ newUser });
+    return response.status(HttpStatus.CREATED).json({newUser});
   }
 }
