@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  athenaHost: 'http://localhost:3000/',
+  athenaHost: 'http://localhost:3333/',
 };
 
 /*

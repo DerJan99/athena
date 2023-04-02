@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
   FencingComponent,
-  HomeComponent, JumpRidingComponent,
+  FencingRefComponent,
+  HomeComponent,
+  JumpRidingComponent,
   LoginComponent,
   LongJumpComponent,
-  SprintComponent, SwimComponent,
-  UserManagementComponent
+  SprintComponent,
+  SwimComponent,
+  UserManagementComponent,
 } from '@athena/frontend/views';
 
 const routes: Routes = [
@@ -14,12 +17,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'userManagement', component: UserManagementComponent },
-
-  { path: "sprint", component: SprintComponent },
-  { path: "long-jump", component: LongJumpComponent },
-  { path: "swimming", component: SwimComponent },
-  { path: "jump-riding", component: JumpRidingComponent },
-  { path: "fencing", component: FencingComponent }
+  { path: 'fencing', component: FencingComponent },
+  { path: 'fencing/fencing-ref', component: FencingRefComponent },
+  { path: 'sprint', component: SprintComponent },
+  { path: 'long-jump', component: LongJumpComponent },
+  { path: 'swimming', component: SwimComponent },
+  { path: 'jump-riding', component: JumpRidingComponent },
+  { path: 'fencing', component: FencingComponent },
 ];
 
 @NgModule({

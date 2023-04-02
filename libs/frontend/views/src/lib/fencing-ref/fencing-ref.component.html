@@ -1,0 +1,17 @@
+<button mat-button color="primary" class="homeButton" [routerLink]="'/fencing'">
+  Zurück zur Übersicht
+</button>
+<mat-tab-group>
+  <mat-tab label="Achtelfinale"
+    ><athena-final-table [data]="fencingDataSource1"></athena-final-table
+  ></mat-tab>
+  <mat-tab label="Viertelfinale"
+    ><athena-final-table [data]="fencingDataSource2"></athena-final-table
+  ></mat-tab>
+  <mat-tab label="Halbfinale"
+    ><athena-final-table [data]="fencingDataSource3"></athena-final-table
+  ></mat-tab>
+  <mat-tab label="Finale"
+    ><athena-final-table [data]="fencingDataSource4"></athena-final-table
+  ></mat-tab>
+</mat-tab-group>

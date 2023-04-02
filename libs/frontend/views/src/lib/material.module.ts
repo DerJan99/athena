@@ -30,6 +30,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { NgTournamentTreeModule } from 'ng-tournament-tree';
 
 const modules = [
   MatButtonModule,
@@ -64,6 +65,7 @@ const modules = [
   MatSliderModule,
   MatGridListModule,
   FormsModule,
+  NgTournamentTreeModule,
 ];
 
 @NgModule({
