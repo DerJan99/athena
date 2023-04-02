@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FooterComponent, FrontendUtilsModule } from '@athena/frontend/utils';
-
-import { StatisticTableComponent } from '../../../utils/src/lib/statistic-table/statistic-table.component';
+import {
+  FooterComponent,
+  FrontendUtilsModule,
+  StatisticTableComponent,
+} from '@athena/frontend/utils';
 import { FencingRefComponent } from './fencing-ref/fencing-ref.component';
 import { FencingComponent } from './fencing/fencing.component';
 import { TtMatchComponent } from './fencing/tt-match/tt-match.component';

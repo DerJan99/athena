@@ -15,7 +15,6 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@typescript-eslint/no-empty-function": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
