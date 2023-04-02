@@ -1,0 +1,33 @@
+.menuTopLineContainer {
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 100%;
+}
+
+.homeButton {
+  width: 10%;
+  border: 2px solid silver;
+}
+
+.headline {
+  width: 80%;
+  border: 2px solid silver;
+  text-align: center;
+}
+
+.loginButton {
+  width: 10%;
+  border: 2px solid silver;
+}
+
+.menuBottomLineContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sportTypes {
+  border: 2px solid silver;
+  width: 16.67%;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AthleteService } from 'libs/frontend/services/src/lib/services/athlete.service';
 
 @Component({
   selector: 'athena-fencing',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fencing.component.scss'],
 })
 export class FencingComponent implements OnInit {
-  constructor() {}
+  constructor(public athleteService: AthleteService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.athleteService.fillFencingTournament();
+  }
 }
